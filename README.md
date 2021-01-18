@@ -15,3 +15,7 @@ Everything was written in JavaScript / Node.js, React.js, React Hooks, GraphQL, 
 - GraphQL has a eslint problem and in the moment to use time wiseley had to be cut from project
 - Amazon serverless had a problem finding the yml file but is inlcuded in the repo to show it is there
 - Installed and tested wit Jest! Although not able to use with JSX elements
+## Images
+![](Express.png)
+![](React.png)
+![](YML.png)
