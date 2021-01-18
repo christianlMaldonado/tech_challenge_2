@@ -1,24 +1,34 @@
 [
     {
-        "Ariana Grande":{
-            "Rank":1,
-            "Song":"Postiions"
+        "Postions":{
+            "Rank: 1":1,
+            "Ariana grande":"/"
         },
-        "AVA Max":{
-            "Rank":2,
-            "Song":"Postiions"
+        "Moood f/iann Dior":{
+            "Rank: 1":2,
+            "24kGOLDN":"/"
         },
-        "24KGold":{
-            "Rank":3,
-            "Song":"Postiions"
+        "Holy f/Chance The Rapper":{
+            "Rank: 3":3,
+            "Justin Beiber":"/"
         },
-        "Justin Beiber":{
-            "Rank":4,
-            "Song":"Postiions"
+        "Kings & Queens":{
+            "Rank: 4":4,
+            "Ava MAx":"/"
         },
-        "Halsey":{
-            "Rank":5,
-            "Song":"Postiions"
+        "Levitating":{
+            "Rank: 5":5,
+            "Dua Lipa":"/"
+        }
+        ,
+        "Lonley":{
+            "Rank: 6":6,
+            "Justin Beiber & Benny Blanco":"/"
+        }
+        ,
+        "BAng!":{
+            "Rank: 7":7,
+            "AJR":"/"
         }
     }
 ]

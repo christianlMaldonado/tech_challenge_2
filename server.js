@@ -4,10 +4,10 @@ const path = require('path');
 const app = express();
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '/client/src/data/songs.json')));
 
 // An api endpoint that returns a short list of items
-app.get('/api/getList', (req,res) => {
+app.get('/src/components/songList', (req,res) => {
 	var list = ["item1", "item2", "item3"];
 	res.json(list);
 	console.log('Sent list of items');
