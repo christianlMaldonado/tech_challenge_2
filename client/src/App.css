@@ -8,8 +8,8 @@ ffffff - white
 */
 
 body {
-  background-color: grey;
-  color: c6002b;
+  background-color: white;
+  color: black;
   padding: 50px;
   font-family: Arial;
   text-align: center;
@@ -24,8 +24,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background: grey;
-  color: white;
+  background: white;
+  color: black;
 }
 
 .nav-links{

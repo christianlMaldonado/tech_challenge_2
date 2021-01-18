@@ -1,39 +1,41 @@
-// importing react and using Hooks, like useState
+// This imports react and Hooks, like useState
 import React, { useState } from 'react';
-
+// This lets us import the Song Page Jumbotron
+import SongPageJumbotron from '../components/SongPageJumbotron';
+import Table from 'react-bootstrap/Table';
 const songs = require('../data/songs.json');
 
 // Creating the songlist for users
-const SongsList= () => {
+const SongsList = () => {
 
     // Lets us show and hide the menu for the songslist to display 
-    const [showText,hideText]=useState(false);
-    const [add,minus] =useState(true);
+    const [showText, hideText] = useState(false);
+    const [add, minus] = useState(true);
 
-    //importing songs form json format
+    //importing songs from json format
     const dataImport = songs[0];
 
     function renderHeaderCells() {
-       let headerCells = [];
+        let headerCells = [];
 
-       Object.keys(dataImport).map((x, i) => {
-        let items = Object.values(dataImport)[i];
-        headerCells.push(
-          <th colSpan={Object.keys(items).length} key={i.name}>
-            {x}
-          </th>
-        );
-            return headerCells;        
-         });
+        Object.keys(dataImport).map((x, i) => {
+            let items = Object.values(dataImport)[i];
+            headerCells.push(
+                <th colSpan={Object.keys(items).length} key={i.name}>
+                    {x}
+                </th>
+            );
+            return headerCells;
+        });
         return headerCells;
     }
 
-    function renderSubHeaders(){
+    function renderSubHeaders() {
         let subHeaders = [];
         let subs = Object.values(dataImport);
-        
-        subs.map((x,i)=> {
-            if(subs[i] !== undefined) {
+
+        subs.map((x, i) => {
+            if (subs[i] !== undefined) {
                 Object.keys(subs[i]).map(y => {
                     subHeaders.push(<td>{y}</td>);
                     return subHeaders;
@@ -44,48 +46,36 @@ const SongsList= () => {
         return subHeaders;
     }
 
-    function renderResults() {
-        let results = [];
-        let res = Object.values(dataImport)
+    console.log(dataImport);
+    console.log(songs);
 
-        res.map((x,i)=> {
-            if(res[i] !== undefined) {
-                Object.keys(res[i]).map(y => {
-                    results.push(<td>{y}</td>);
-                    return results;
-                });
-            }
-            return results;
-        });
-        return results;
-    }
-
-    console.log(songs)
     return (
         <React.Fragment>
-            <p> Songs List</p>
-            <button className="plus" onClick={() =>
-                {hideText(!showText);minus(!add)}}>{add?'Show Songs':'Hide Songs'}
-            </button>{showText &&
-           
-           <div>
-                <p> lipsum dloream isp pur</p>
+            
+            {/* // Importing the Song Page Jumbotron */}
+            <SongPageJumbotron/>
+            
+            {/* // This lets us hava a button that displays and hides text to users */}
+            <button className="plus" onClick={() => { hideText(!showText); minus(!add) }}>{add ? 'Show Songs' : 'Hide Songs'} </button> 
+            
+            {showText &&
 
-                <table>
-                <thead>
-                    <tr> {renderHeaderCells()}</tr>
-                </thead>
-                <tbody>
-                    <tr> {renderSubHeaders()}</tr>
-                    <tr>{renderResults()}</tr>
-                </tbody>
-            </table>
-            </div>
+                <div>
+            
+                    <p> Tops Songs On The Charts</p>
+                    
+                    <Table stripped bordered hover variant="dark">
+                        <thead>
+                            <tr> {renderHeaderCells()}</tr>
+                        </thead>
+                        <tbody>
+                            <tr> {renderSubHeaders()} </tr>
+                        </tbody>
+                    </Table>
 
+                </div>
             }
-
-
-           
+        
         </React.Fragment>
     );
 };

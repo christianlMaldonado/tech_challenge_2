@@ -3,10 +3,12 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 import logo from "../Assets/Logo.png";
 
+
+// This is the Navigation bar with some custom inline CSS
 function Nav() {
 
     const navStyle = {
-        color: 'white'
+        color: 'black'
     };
 
     return (
